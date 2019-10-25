@@ -1,0 +1,57 @@
+SCR Lab1
+1)System plików Unixa i polecenia na katalogach
+cd – wejście do katalogu
+ls –  wypisanie wszystkich plików znajdujących się w katalogu, gdzie poszczególne flagi oznaczają: 
+-l   - informacje o prawach dostępu, rozmiarach plików, dacie modyfikacji.
+-a   - wyświetlanie plików ukrytych 
+-t   - sortowanie według czasu modyfikacji
+-r   - odwrócenie kolejności sortowania
+mkdir – tworzenie nowego katalogu
+man – pozwala wyświetlić dokumentację dowolnego polecenia
+
+2)Operacje na plikach
+mv   - przenoszenie pliku w inne miejsce
+cp   - kopiowanie plików 
+less – wyświetla zawartość plików tekstowych
+
+3)Prawa dostępu do plików
+echo – wyświetlanie tekstu, który wpiszemy
+cat – wyświetla zawartość pliku
+chmod – zmienia prawa dostępu użytkownikom, gdzie poszczególne prawa oznaczają:
+	r – odczytywanie
+	w – zapis
+	x – wykonywanie pliku
+Dlatego np.: chmod -r usuwa prawo do odczytu pliku.
+
+4) Operacje na procesach
+ps – wyświetla aktywne procesy, gdzie flagi oznaczają:
+	e – wyświetla wszystkie uruchomione procesy
+  
+5) Kasowanie procesów
+kill – usuwa konkretne procesy, podane jako argument
+
+6) Uzyskiwanie informacji o użytkownikach
+Who – kiedy, i gdzie zalogował się użytkownik ostatni raz
+Finger – wyświetla wszystkie informacje o użytkowniku
+
+7)Uzyskiwanie informacji o historii włączeń do systemu
+last – szuka informacji o logowaniu 
+last | less – wyświetli informacje o ostatnich logowaniach
+
+11)Program find
+Program find służy do “znajdowania” na dysku komputera plików spełniających określone warunki.
+W celu wyszukania w katalogu /etc plików o rozmiarze do 1kB utworzone w ciągu ostatnich 3 dni należy wykorzystać polecenie 
+find /etc -size -1k -mtime -3
+W celu wyszukania w tym samym katalogu plików nie większych niż 250kB utworzonych od 30 do 90 dni temu należy użyć polecenia
+ find /etc -size -250k -mtime +30 -mtime -90
+ 
+12)Program tar
+Kompresja plików przy użyciu polecenia tar powinna wyglądać w następujący sposób:
+tar -cvf nowy_plik.tar pliki_do_archiwizacji
+Dekompresję wykonujemy przy użyciu flagi -x, tj:
+tar -xf nowy_plik.tar
+
+15) Prawa dostępu chmod / umask
+Unmask – ustawia domyślne pozwolenia 
+
+
